@@ -12,9 +12,10 @@ int main(){
 	scanf("%f",&b);
 	c = b * 1.05;
 	d = b * 1.07;
-	if(b < 1000)
+	if(b < 1000){
 		printf("a mercadoria %s tem o novo preco de: %.2f",a,c);
-	else
+	}else{
 		printf("a mercadoria %s tem o novo preco de: %.2f",a,d);
+	}
 	return 0;
 }

@@ -17,13 +17,14 @@ int main(){
 	da = a - ((a * 12) / 100);
 	e = (a * 14) / 100;
 	ea = a - ((a * 14) / 100);
-	if(a <= 1212.00)
+	if(a <= 1212.00){
 		printf("com o desconto do INSS de %.2f R$ (7.5 porcento) o salario final fica: %.2f R$",b,ba);
-	else if(a > 1212.01 && a < 2427.35)
+	}else if(a > 1212.01 && a < 2427.35){
 		printf("com o desconto do INSS de %.2f R$ (9 porcento) o salario final fica: %.2f R$",c,ca);
-	else if(a > 2427.36 && a < 3641.03)
+	}else if(a > 2427.36 && a < 3641.03){
 		printf("com o desconto do INSS de %.2f R$ o (12 porcento) salario final fica: %.2f R$",d,da);
-	else
+	}else{
 		printf("com o desconto do INSS de %.2f R$ (14 porcento) o salario final fica: %.2f R$",e,ea);
+	}
 	return 0;
 }

@@ -10,9 +10,10 @@ int main(){
 	printf("digite o numero de filhos do funcionario: ");
 	scanf("%f",&b);
 	c = (45 * b) + a;
-	if(a < 2000)
+	if(a < 2000){
 		printf("o salario final do funcionario sera de: %.2f R$",c);
-	else 
+	}else{
 		printf("o salario continuara sem mudanca: %.2f R$",a);
+	}
 	return 0;
 }

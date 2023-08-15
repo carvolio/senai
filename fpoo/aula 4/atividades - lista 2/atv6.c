@@ -16,7 +16,7 @@ int main(){
 		printf("o maior numero digitado foi: %d",d);
 	}else if(e >= a && e >= c && e >= d && e >= b && e >= f){
 		printf("o maior numero digitado foi: %d",e);
-	}else if(f >= a && f >= c && f >= d && f >= e && f >= b){
+	}else(f >= a && f >= c && f >= d && f >= e && f >= b);{
 		printf("o maior numero digitado foi: %d",f);
 	}	
 	return 0;

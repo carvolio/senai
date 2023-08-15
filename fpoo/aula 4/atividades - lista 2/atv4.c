@@ -7,11 +7,12 @@ int main(){
 	float a, b, c;
 	printf("digite os valores dos 3 lados do triangulo com espaco: ");
 	scanf("%f %f %f",&a ,&b ,&c);
-	if(a == b && b == c && c == a)
+	if(a == b && b == c && c == a){
 		printf("EQUILATERO");
-	else if(a != b && b != c && c != a)
+	}else if(a != b && b != c && c != a){
 		printf("ESCALENO");
-	else
+	}else{
 		printf("ISOSCELES");
+	}
 	return 0;
 }
