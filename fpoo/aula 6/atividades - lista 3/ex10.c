@@ -3,11 +3,15 @@
 Escreva um programa que leia 10 números inteiros e exiba na tela ao final, o maior número que foi digitado pelo usuário
 */
 int main(){
-	int nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nu10;
-	printf("digite 10 numeros inteiros com espaco: ");
-	scanf("%d %d %d %d %d %d %d %d %d %d", &nu1, &nu2, &nu3, &nu4, &nu5, &nu6, &nu7, &nu8, &nu9, &nu10);
-	for(i = nu1; i >= nu2; i++){
-			
+	int i, nu, maior;
+	for(i = 1; i <= 10; i++){
+		printf("digite um numero inteiro: ");
+		scanf("%d", &nu);
+		if(nu > maior){
+			maior = nu;
+		}
 	}
+	printf("o maior numero digitado foi: %d",maior);
+	
 	return 0;
 }
