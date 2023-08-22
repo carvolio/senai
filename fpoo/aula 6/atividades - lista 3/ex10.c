@@ -6,5 +6,8 @@ int main(){
 	int nu1, nu2, nu3, nu4, nu5, nu6, nu7, nu8, nu9, nu10;
 	printf("digite 10 numeros inteiros com espaco: ");
 	scanf("%d %d %d %d %d %d %d %d %d %d", &nu1, &nu2, &nu3, &nu4, &nu5, &nu6, &nu7, &nu8, &nu9, &nu10);
+	for(i = nu1; i >= nu2; i++){
+			
+	}
 	return 0;
 }
