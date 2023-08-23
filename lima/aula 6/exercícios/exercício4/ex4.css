@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.red{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+}
+
+.green{
+    background-color: greenyellow;
+    height: 100%;
+    width: 100%;
+}
+
+.blue{
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+}
