@@ -22,6 +22,10 @@ main{
 
 .tabela div{
     margin: 5px;
+}
+
+.text1{
+    width: calc(25% - 1px);
     border-bottom: 1px solid black;
 }
 
