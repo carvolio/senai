@@ -15,7 +15,7 @@ int main(){
 	
 	char candidatos[numcam][15];
 	float votos[numcam], brancos, nulos, votoscam, votosvalidos, campor[numcam], brancopor, eleito, troca;
-	int i, j;
+	int i, j, maior1 = 0, maior2 = 0;
 	
 	printf("\n");
 	
@@ -72,21 +72,19 @@ int main(){
 	}
 	
 	for(i = 0; i <= numcam; i++){
-		for(j = 0; j < numcam - 1; j++){
-			if(votos[j] < votos[j + 1]){
-				troca = votos[j + 1];
-				votos[j + 1] = votos[j];
-				votos[j] = troca;
-			}
+		if(votos[i] > votos[maior1]){
+			maior1 = i;
+		}else if(votos[i] > votos[maior2]){
+			maior2 = i;
 		}
 	}
 	
 	printf("\n");
 	
 	if(votos[0] < eleito && votosvalidos < 200000){
-		printf("o candidato %s foi eleito!", candidatos[0]);
+		printf("o candidato %s foi eleito!", candidatos[maior1]);
 	}else{
-		printf("os candidatos %s e %s vão para o 2º turno!", candidatos[0], candidatos[1]);
+		printf("os candidatos %s e %s vão para o 2º turno!", candidatos[maior1], candidatos[maior2]);
 	}
 	
 	return 0;
