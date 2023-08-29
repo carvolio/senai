@@ -5,17 +5,17 @@
 int main(){
 	setlocale(LC_ALL,"");
 	
-	float numcam;
+	int numcam;
 	char cidade[15];
 	
 	printf("digite o nome da cidade: ");
 	gets(cidade);
 	printf("Nº de candidatos: ");
-	scanf("%f", &numcam);
+	scanf("%d", &numcam);
 	
-	char candidatos[10][15];
-	float votos[10], brancos, nulos, votoscam, votosvalidos, campor[10], brancopor;
-	int i;
+	char candidatos[numcam][15];
+	float votos[numcam], brancos, nulos, votoscam, votosvalidos, campor[numcam], brancopor, eleito, troca;
+	int i, j;
 	
 	printf("\n");
 	
@@ -35,11 +35,7 @@ int main(){
 	scanf("%f", &nulos);
 	
 	for(i = 0; i <= numcam - 1; i++){
-		votos[i] += votos[i + 1];
-	}
-	
-	if(numcam > 0){
-		votoscam = votos[0];
+		votoscam += votos[i];
 	}
 	
 	votosvalidos = votoscam + brancos;
@@ -55,7 +51,7 @@ int main(){
 	printf("\n");
 	
 	for(i = 0; i <= numcam; i++){
-		campor[i] = (votos[i] * 100) / votosvalidos;
+		campor[i] = votos[i] * 100 / votosvalidos ;
 	}
 	
 	for(i = 0; i <= numcam - 1; i++){
@@ -65,7 +61,33 @@ int main(){
 	brancopor = (brancos * 100) / votosvalidos;
 	printf("porcentagem de votos brancos: %.2f", brancopor);
 	
+	eleito = (votosvalidos / 2) + 1;
 	
+	printf("\n");
+	
+	for(i = 0; i <= numcam; i++){
+		if(votos[i] >= eleito){
+			printf("o candidato %s foi eleito!", candidatos[i]);
+		}
+	}
+	
+	for(i = 0; i <= numcam; i++){
+		for(j = 0; j < numcam - 1; j++){
+			if(votos[j] < votos[j + 1]){
+				troca = votos[j + 1];
+				votos[j + 1] = votos[j];
+				votos[j] = troca;
+			}
+		}
+	}
+	
+	printf("\n");
+	
+	if(votos[0] < eleito && votosvalidos < 200000){
+		printf("o candidato %s foi eleito!", candidatos[0]);
+	}else{
+		printf("os candidatos %s e %s vão para o 2º turno!", candidatos[0], candidatos[1]);
+	}
 	
 	return 0;
 }
