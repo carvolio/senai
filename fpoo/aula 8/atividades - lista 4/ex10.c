@@ -8,24 +8,25 @@ Utilizando apenas um vetor de tamanho 6, troque os valores de maneira inversa, e
 int main(){
 	setlocale(LC_ALL,"");
 	
-	int vetor[6], i, troca, j = 5, k = 6;
+	int vetor[6], i, troca;
+	int tamanho = sizeof(vetor) / sizeof(vetor[0]);
 	
 	for(i = 0; i < 6; i++){
 		printf("digite o %dº número do vetor: ", i + 1);
 		scanf("%d", &vetor[i]);
 	}
 	
-	for(i = 0; i < 6; i++){
-		vetor[i] = vetor[j];
-		vetor[j] = vetor[i + k];
-		j--;
-		k--;
+	for(i = 0; i < tamanho / 2; i++){
+		troca = vetor[i];
+		vetor[i] = vetor[tamanho - 1 - i];
+		vetor[tamanho - 1 - i] = troca;
 	}
 	
 	printf("\n");
 	
+	printf("ordem inversa:");
 	for(i = 0; i < 6; i++){
-		printf("%d\n", vetor[i]);
+		printf(" %d", vetor[i]);
 	}
 	
 	return 0;

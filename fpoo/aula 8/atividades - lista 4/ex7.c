@@ -9,37 +9,21 @@ os cinco números em ordem decrescente
 int main(){
 	setlocale(LC_ALL,"");
 	
-	int nu[5], i, troca;
+	int nu[5], i, troca, j;
 	
 	for(i = 0; i < 5; i++){
 		printf("digite um número inteiro: ");
 		scanf("%d", &nu[i]);
 	}
 
-	if(nu[0] > nu[1]){
-		troca = nu[0];
-		nu[0] = nu[1];
-		nu[1] = troca;
-	}
-	if(nu[1] < nu[2]){
-		troca = nu[1];
-		nu[1] = nu[2];
-		nu[2] = troca;
-	}
-	if(nu[2] < nu[3]){
-		troca = nu[2];
-		nu[2] = nu[3];
-		nu[3] = troca;
-	}
-	if(nu[3] < nu[4]){
-		troca = nu[3];
-		nu[3] = nu[4];
-		nu[4] = troca;
-	}
-	if(nu[4] > nu[0]){
-		troca = nu[4];
-		nu[4] = nu[0];
-		nu[0] = troca;
+	for(i = 0; i < 5; i++){
+		for(j = 0; j < 5 - 1; j++){
+			if(nu[j] < nu[j + 1]){
+				troca = nu[j + 1];
+				nu[j + 1] = nu[i];
+				nu[i] = troca;
+			}
+		}
 	}
 	
 	printf("\n");
