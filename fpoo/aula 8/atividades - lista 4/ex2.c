@@ -11,8 +11,8 @@ classificação decrescente. Lembrando que a vitória vale 3 pontos e o empate vale
 int main(){
 	setlocale(LC_ALL,"");
 	
-	char time[5][15];
-	int vitoria[5], empate[5], i, pontos[5], troca;
+	char time[5][15], trocaTime[10];
+	int vitoria[5], empate[5], i, pontos[5], trocaPontos, j, maior;
 	
 	for(i = 0; i < 5; i++){
 		printf("digite o nome do %dº time: ",i + 1);
@@ -29,18 +29,28 @@ int main(){
 		scanf("%d", &empate[i]);
 	}
 	
-	pontos[0] = (vitoria[0] * 3) + empate[0];
-	pontos[1] = (vitoria[1] * 3) + empate[1];
-	pontos[2] = (vitoria[2] * 3) + empate[2];
-	pontos[3] = (vitoria[3] * 3) + empate[3];
-	pontos[4] = (vitoria[4] * 3) + empate[4];
 	
 	for(i = 0; i < 5; i++){
-		if(pontos[i] < pontos[i + 1]){
-			troca = pontos[i];
-			pontos[i] = pontos[i + 1];
-			pontos[i + 1] = pontos [i];
+		pontos[i] = (vitoria[i] * 3) + empate[i];
+	}
+	
+	
+	for(i = 0; i < 5; i++){
+		maior = i;
+		
+		for(j = i; j < 5; j++){
+			if(pontos[j] > pontos[maior]){
+				maior = j;
+			}
 		}
+		
+		trocaPontos = pontos[i];
+		pontos[i] = pontos[maior];
+		pontos[maior] = trocaPontos;
+		
+		strcpy(trocaTime, time[i]);
+		strcpy(time[i], time[maior]);
+		strcpy(time[maior], trocaTime);
 	}
 	
 	printf("\n");
