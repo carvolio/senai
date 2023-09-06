@@ -58,8 +58,8 @@ main{
     grid-gap: 40px 140px;
     /* border: 2px solid black; */
     margin-left: 175px;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center; 
+    align-items: center;
     text-align: center;
 }
 
@@ -128,6 +128,11 @@ footer div span{
     margin-left: 30px;
 }
 
+footer img{
+    height: 15px;
+    width: 15px;
+}
+
 .border1{
     border: 1px solid var(--white);
     background-color: var(--color2);
@@ -137,10 +142,11 @@ footer div span{
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 
 .border1 span{
     margin-top: 10px;
+    margin-left: 75px;
 }
