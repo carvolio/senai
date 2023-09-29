@@ -1,21 +1,30 @@
 #include <stdio.h>
 #include <locale.h>
 
-void posicao(){
+void entrada(){
 	int total, i;
-	char direcao[1][total];
+	char direcao[10][total];
 	printf("número de comandos: ", total);
 	scanf("%d", &total);
 	for(i = 0; i <= total - 1; i++){
 		printf("direçoes do comando: ");
 		scanf("%s", &direcao[i]);
 	}
-	if()
-	
+}
+
+void processo(){
+	char *direcao, *total;
+	int i;
+	for(i = 0; i <= total + 1; i++){
+		if(direcao != 'E'){
+		printf("baatta");
+		}
+	}
 }
 
 int main(){
 	setlocale(LC_ALL,"");
-	posicao();
+	entrada();
+	processo();
 	return 0;
 }
