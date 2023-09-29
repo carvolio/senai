@@ -16,8 +16,8 @@ void processo(){
 	char *direcao, *total;
 	int i;
 	for(i = 0; i <= total + 1; i++){
-		if(direcao != 'E'){
-		printf("baatta");
+		if(direcao == 'E'){
+		printf("batata");
 		}
 	}
 }
