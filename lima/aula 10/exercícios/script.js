@@ -34,3 +34,14 @@ function ex5(){
   console.log(`${numeroN - 1} e ${numeroN + 1}`);
   document.querySelector('#mostraEx5').innerHTML = `${numeroN - 1} e ${numeroN + 1}`;
 }
+
+function ex6(){
+  let distancia6 = Number(document.querySelector('#distancia6').value);
+  console.log(`${distancia6 / 900}h`);
+  document.querySelector('#mostraEx6').innerHTML = `${distancia6 / 900} horas para chegar ao destino`;
+}
+
+function ex7(){
+  let caminhao = Number(document.querySelector('#caminhao').value);
+  let calqueire = Number(document.querySelector('#alqueire').value);
+}
