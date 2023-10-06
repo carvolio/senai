@@ -43,5 +43,30 @@ function ex6(){
 
 function ex7(){
   let caminhao = Number(document.querySelector('#caminhao').value);
-  let calqueire = Number(document.querySelector('#alqueire').value);
+  let alqueire = Number(document.querySelector('#alqueire').value);
+  console.log(`${alqueire * 250}` / `${caminhao * 18}`);
+  document.querySelector(`#mostraEx7`).innerHTML = `${(alqueire * 250) / (caminhao * 18)} viagems`;
 }
+
+function ex8(){
+  let raio = Number(document.querySelector('#raio').value);
+  let altura = Number(document.querySelector('#altura').value);
+  console.log(`área = ${2 * 3 * raio * (raio + altura)}cm2 e volume = ${3 * (raio * raio) * altura}cm3`);
+  document.querySelector(`#mostraEx8`).innerHTML = `área = ${2 * 3 * raio * (raio + altura)}cm2 e volume = ${3 * (raio * raio) * altura}cm3`;
+}
+
+function ex9(){
+  let mercadoria = document.querySelector('#mercadoria').value;
+  let preco = Number(document.querySelector('#preco').value);
+  console.log(`${mercadoria} tem o novo valor de: ${preco * 1.05}R$`);
+  document.querySelector(`#mostraEx9`).innerHTML = `${mercadoria} tem o novo valor de: ${preco * 1.05} R$`;
+}
+
+function ex10(){
+  let cidade = document.querySelector('#cidade').value;
+  let eleitores = Number(document.querySelector('#eleitores').value);
+  let votos = Number(document.querySelector('#votos').value);
+  console.log(`${cidade} teve ${(100 * votos) / eleitores}% de eleitores votantes!`);
+  document.querySelector(`#mostraEx10`).innerHTML = `${cidade} teve ${(100 * votos) / eleitores}% de eleitores votantes!`;
+}
+
