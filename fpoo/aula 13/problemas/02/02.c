@@ -1,52 +1,60 @@
 #include <stdio.h>
 #include <locale.h>
 
-int total;
+#define BUFFER 100
 
-void entrada(){
-	int i;
-	char comando[total];
-	printf("número de comandos: ", total);
-	scanf("%d", &total);
-	for(i = 0; i <= total - 1; i++){
-		printf("direçoes do comando: ");
-		scanf("%s", &comando[i]);
-	}
-}
+FILE *ent, *sai;
 
-void processo(){
-	char *comando;
-	char direcao = 'N';
-	int i;
-	for(i = 0; i <= total - 1; i++){
-		if(comando == 'D'){
-			if(direcao == 'N'){
-				direcao = 'L';
-			}else if(direcao == 'L'){
-				direcao = 'S';
-			}else if(direcao == 'S'){
-				direcao = 'O';
-			}else if(direcao == 'O'){
-				direcao = 'N';
-			}
-		}else if(comando == 'E'){
-			if(direcao == 'N'){
-				direcao = 'O';
-			}else if(direcao == 'O'){
-				direcao = 'S';
-			}else if(direcao == 'S'){
-				direcao = 'L';
-			}else if(direcao == 'L'){
-				direcao = 'N';
-			}
-		}
-	}
-	printf("%s", direcao);
-}
+char entrada[] = "esquerda.in.txt";
+char saida[] = "esquerda.out.txt";
 
 int main(){
 	setlocale(LC_ALL,"");
-	entrada();
-	processo();
+	char comando[BUFFER];
+	int i;
+	
+	ent = fopen(entrada, "r");
+	sai = fopen(saida, "w");
+	if(entrada == NULL){
+		printf("arquivo não encontrado!");
+		return 1;
+	}
+	
+	while(fgets(comando, BUFFER, ent) != NULL){
+		int numero = atoi(strtok(comando, " "));
+		char direcao = strtok(\n, "");
+		char direcaoAtual = 'N';
+		
+		for(i = 0; i < numero; i++){
+			if(direcao == 'D'){
+				if(direcaoAtual == 'N'){
+					direcaoAtual = 'L';
+				}else if(direcaoAtual == 'L'){
+					direcaoAtual = 'S';
+				}else if(direcaoAtual == 'S'){
+					direcaoAtual = 'O';
+				}else if(direcaoAtual == 'O'){
+					direcaoAtual = 'N';
+				}
+			}else if(direcao == 'E'){
+				if(direcaoAtual == 'N'){
+					direcaoAtual = 'O';
+				}else if(direcaoAtual == 'O'){
+					direcaoAtual = 'S';
+				}else if(direcaoAtual == 'S'){
+					direcaoAtual = 'L';
+				}else if(direcaoAtual == 'L'){
+					direcaoAtual = 'N';
+				}
+			}
+		}
+	}
+	
+
+//	fprintf(sai, "%s", direcaoAtual);
+	
+	fclose(ent);
+	fclose(sai);
+	
 	return 0;
 }
