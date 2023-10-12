@@ -3,58 +3,50 @@
 
 #define BUFFER 100
 
-FILE *ent, *sai;
-
-char entrada[] = "esquerda.in.txt";
-char saida[] = "esquerda.out.txt";
-
 int main(){
 	setlocale(LC_ALL,"");
-	char comando[BUFFER];
-	int i;
+	FILE *entrada, *saida;
+	char linha[BUFFER];
+	char direcao;
+	char norteSul[] = {'N', 'L', 'S', 'O'};
+	int i = 0;
 	
-	ent = fopen(entrada, "r");
-	sai = fopen(saida, "w");
+	entrada = fopen("esquerda.in.txt", "r");
 	if(entrada == NULL){
-		printf("arquivo não encontrado!");
-		return 1;
-	}
-	
-	while(fgets(comando, BUFFER, ent) != NULL){
-		int numero = atoi(strtok(comando, " "));
-		char direcao = strtok(\n, "");
-		char direcaoAtual = 'N';
-		
-		for(i = 0; i < numero; i++){
-			if(direcao == 'D'){
-				if(direcaoAtual == 'N'){
-					direcaoAtual = 'L';
-				}else if(direcaoAtual == 'L'){
-					direcaoAtual = 'S';
-				}else if(direcaoAtual == 'S'){
-					direcaoAtual = 'O';
-				}else if(direcaoAtual == 'O'){
-					direcaoAtual = 'N';
-				}
-			}else if(direcao == 'E'){
-				if(direcaoAtual == 'N'){
-					direcaoAtual = 'O';
-				}else if(direcaoAtual == 'O'){
-					direcaoAtual = 'S';
-				}else if(direcaoAtual == 'S'){
-					direcaoAtual = 'L';
-				}else if(direcaoAtual == 'L'){
-					direcaoAtual = 'N';
-				}
-			}
+		printf("ERRO!");
+		system("pause");
+		return 0;
+	}else{
+		for(i = 0; i <= BUFFER; i+=2){
+			fgets(linha, BUFFER, entrada) != NULL;
+			printf("%s", linha);
 		}
 	}
+//	}else{
+//		while(fgets(linha, BUFFER, entrada) != NULL){
+//			
+//			do{
+//				if(direcao == 'D'){
+//					if(i == 3){
+//						i = 0;
+//						norteSul[i]; 
+//					}
+//					i++;
+//					norteSul[i];
+//				}else(direcao == 'E');{
+//					if(i == 0){
+//						i = 3;
+//						norteSul[i]; 
+//					}
+//					i--;
+//					norteSul[i];
+//				}
+//			}while(direcao != "\n");
+//			printf("%s", direcao);
+//		}
+//	}
 	
-
-//	fprintf(sai, "%s", direcaoAtual);
-	
-	fclose(ent);
-	fclose(sai);
+	fclose(entrada);
 	
 	return 0;
 }
