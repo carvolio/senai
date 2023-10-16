@@ -22,29 +22,29 @@ int main(){
 			printf("%s", linha);
 		}
 	}
-//	}else{
-//		while(fgets(linha, BUFFER, entrada) != NULL){
-//			
-//			do{
-//				if(direcao == 'D'){
-//					if(i == 3){
-//						i = 0;
-//						norteSul[i]; 
-//					}
-//					i++;
-//					norteSul[i];
-//				}else(direcao == 'E');{
-//					if(i == 0){
-//						i = 3;
-//						norteSul[i]; 
-//					}
-//					i--;
-//					norteSul[i];
-//				}
-//			}while(direcao != "\n");
-//			printf("%s", direcao);
-//		}
-//	}
+	}else{
+		while(fgets(linha, BUFFER, entrada) != NULL){
+			
+			do{
+				if(direcao == 'D'){
+					if(i == 3){
+						i = 0;
+						norteSul[i]; 
+					}
+					i++;
+					norteSul[i];
+				}else(direcao == 'E');{
+					if(i == 0){
+						i = 3;
+						norteSul[i]; 
+					}
+					i--;
+					norteSul[i];
+				}
+			}while(direcao != "\n");
+			printf("%s", direcao);
+		}
+	}
 	
 	fclose(entrada);
 	
