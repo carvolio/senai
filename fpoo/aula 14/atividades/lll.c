@@ -7,6 +7,7 @@ int entrada;
 int ponteiro = 0;
 int i;
 int j = 0;
+int m = 0;
 int fila[100];
 int posicao;
 
@@ -27,7 +28,7 @@ int contaFila(){
 }
 void mostraMais(){
 	for(i = j; i < ponteiro; i++){
-		printf("%d\n", fila[i]);
+		printf("%d\n", fila[i + m]);
 	}
 }
 
@@ -40,7 +41,19 @@ void mostraMenos(){
         for(i = 0; i < ponteiro; i++){
             printf("%d\n", fila[i]);
         }
+        m++;
     }
+//	if(posicao >= 0 && posicao < ponteiro){
+//		for(i = 0; i < ponteiro - 1; i++){
+//			if(posicao == fila[i]){
+//				fila[i] = 0;
+//			}
+//		}
+//		ponteiro--;
+//        for(i = 0; i < ponteiro; i++){
+//            printf("%d\n", fila[i]);
+//		}	
+//	}
 }
 
 int push(){
