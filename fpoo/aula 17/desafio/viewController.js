@@ -27,6 +27,19 @@ function criarCard(){
 //     card.classList.remove('cardNew');
 // }
 
+function removerElemento(query){
+    var ex = document.querySelector(query);
+    if(!ex){
+        return;
+    }
+    ex.parentElement.removeChild(ex);
+    // var node = document.getElementById('.cards');
+    // if(node.parentNode){
+    //     node.parentNode.removeChild(node);
+    // }
+}
+
 cards.addEventListener('submit', (n) => {
-    removerElemento(".card");
+    e.preventDefault();
+    removerElemento(cardNew);
 })
