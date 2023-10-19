@@ -28,18 +28,14 @@ function criarCard(){
 // }
 
 function removerElemento(query){
-    var ex = document.querySelector(query);
-    if(!ex){
-        return;
-    }
-    ex.parentElement.removeChild(ex);
+    query.parentNode.remove();
     // var node = document.getElementById('.cards');
     // if(node.parentNode){
     //     node.parentNode.removeChild(node);
     // }
 }
 
-cards.addEventListener('submit', (n) => {
-    e.preventDefault();
-    removerElemento(cardNew);
-})
+// cards.addEventListener('submit', (n) => {
+//     e.preventDefault();
+//     removerElemento(card);
+// })
