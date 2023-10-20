@@ -1,5 +1,26 @@
 body{
-    background: #eee;
+    background: #eeeeee;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em;
+}
+
+input{
+    border-radius: 1em;
+    margin: 1em;
+    padding: 1em;
+    border: 0px solid black;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 400px 400px 400px 400px;
+    justify-content: center;
+    align-items: center;
 }
 
 .card{
@@ -9,6 +30,7 @@ body{
     border: 1px solid black;
     background: #fff;
     box-shadow: 5px 5px 15px rgba(0,0,0, .5);
+    margin: 2em;
 }
 
 .card h1{

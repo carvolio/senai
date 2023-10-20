@@ -11,7 +11,8 @@ function criarCard(){
     const cards = document.querySelector('.cards');
     var card = document.querySelector('.card');
     cards.innerHTML = '';
-    
+    cards.appendChild(card);
+
     pessoas.forEach(pessoa => {
         var cardNew = card.cloneNode(true);
         cardNew.classList.remove('model');
@@ -19,23 +20,18 @@ function criarCard(){
         cardNew.querySelector("#salarioValor").innerHTML = pessoa.salario;
         cardNew.querySelector("#salarioBase").innerHTML = pessoa.salarioBase;
         cardNew.querySelector("#salarioLiquido").innerHTML = pessoa.salarioLiquido;
+        cardNew.querySelector('.id').innerHTML = `${pessoas.indexOf(pessoa)}`;
         cards.appendChild(cardNew);
     })
 }
 
-// function eliminar(){
-//     card.classList.remove('cardNew');
-// }
-
 function removerElemento(query){
     query.parentNode.remove();
-    // var node = document.getElementById('.cards');
-    // if(node.parentNode){
-    //     node.parentNode.removeChild(node);
-    // }
+    pessoas.splice(query.parentNode.querySelector('.id').innerHTML.slice(1), 1);
+    criarCard();
 }
 
-// cards.addEventListener('submit', (n) => {
-//     e.preventDefault();
-//     removerElemento(card);
-// })
+function editElemento(){
+
+}
+
