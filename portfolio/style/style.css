@@ -6,6 +6,7 @@
 
 body {
     background-color: #1b676b;
+    /* background-color: #25f4e9; */
 }
 
 img {
@@ -40,9 +41,10 @@ img {
 
 .button {
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    margin-top: 7.5em;
 }
 
 .button a {
@@ -55,7 +57,7 @@ img {
     align-items: center;
     height: 7em;
     width: 18em;
-    border-radius: 2em;
+    border-radius: 1em;
     margin: 2em;
     border: 0px solid;
     background-color: white;
@@ -72,10 +74,8 @@ img {
 } */
 
 footer {
-    margin-top: 7.5em;
-}
-
-footer img {
-    height: 5em;
-    width: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 19em;
 }
