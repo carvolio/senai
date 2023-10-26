@@ -1,27 +1,81 @@
 * {
     padding: 0px;
     margin: 0px;
-    font-family: 'Times New Roman', Times, serif;
-    color: rgb(16, 15, 15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    color: rgb(16, 15, 15);
 }
 
 body {
-    background-color: white;
+    background-color: #1b676b;
 }
 
+img {
+    width: 1em;
+    height: 1em;
+}
 
 .username {
-    font-size: 4em;
-    margin-top: 1em; 
-    margin-left: 12em;
-    border-left: 0.5em solid rgb(144, 180, 250);
-    color: rgb(95, 95, 203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6em;
+    margin-top: 0.5em;
 }
 
-.hello {
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5em;
+    font-size: 1.2em;
+}
+
+
+/* .hello {
     font-size: 2em;
     margin-top: 7em;
     margin-left: 3em;
-    border-left: 0.2em solid rgb(144, 180, 250);
+    border-left: 0.2em solid black;
     width: 25em;
+} */
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button a {
+    text-decoration: none;
+}
+
+.button button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7em;
+    width: 18em;
+    border-radius: 2em;
+    margin: 2em;
+    border: 0px solid;
+    background-color: white;
+}
+
+.button button span {
+    font-size: 2em;
+}
+
+/* .button button img {
+    height: 3em;
+    width: 3em;
+    margin-right: 1em;
+} */
+
+footer {
+    margin-top: 7.5em;
+}
+
+footer img {
+    height: 5em;
+    width: 5em;
 }
