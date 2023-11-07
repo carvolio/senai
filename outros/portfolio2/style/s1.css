@@ -1,12 +1,13 @@
 * {
     /* margin: 0px; */
     /* padding: 0px; */
-    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Source Code Pro', monospace;
     /* font-family: sans-serif; */
-    font-family: 'Courier New', Courier, monospace;
-    text-transform:uppercase;
-    font-size: 20px;
-    /* color: white;  */
+    /* font-family: 'Courier New', Courier, monospace; */
+    /* text-transform:uppercase; */
+    font-size: 35px;
+    color: white; 
+    /* color: #376c9b; */
 }
 
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
@@ -20,10 +21,13 @@ body {
     /* background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);  */
     /* background: linear-gradient(90deg, hsla(328, 75%, 45%, 1) 0%, hsla(269, 85%, 41%, 1) 100%);  */
     /* background-image: linear-gradient(-225deg, #231557 0%, #44107A 29%, #FF1361 67%, #FFF800 100%); */
-        --dot-bg: white;
-        --dot-color: black;
+        /* --dot-bg: #376c9b; */
+        --dot-bg: #008F95;
+        /* --dot-bg: #015249; */
+        /* --dot-bg: #465C8B; */
+        --dot-color: BLACK;
         --dot-size: 1px;
-        --dot-space: 22px;
+        --dot-space: 30px;
           background:
               linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
               linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
@@ -83,10 +87,9 @@ body {
 
 
 .h1 {
-    font-size: 25px;
+    font-size: 35px;
     margin-bottom: 10px;
     margin-top: 5px;
-    border: 5px solid white;
 }
 
 .h1 b {
@@ -98,7 +101,6 @@ body {
 .welcome {
     margin-top: 12px;
     margin-bottom: 18px;
-    border: 3px solid white;
 }
 
 main {
