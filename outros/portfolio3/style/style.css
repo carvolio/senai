@@ -1,0 +1,92 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  --dot-bg: #376c9b; 
+  --dot-color: #052f2a;
+  --dot-size: 1px;
+  --dot-space: 30px;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+     var(--dot-color);
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+main a {
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em;
+  font-size: 2em;
+}
+
+header div {
+  margin-left: 7.3em;
+}
+
+.link {
+  display: flex;
+  margin-right: 7em;
+}
+
+.link div {
+  margin-left: 0.4em;
+  margin-right: 0.4em;
+}
+
+.name {
+  display: flex;
+  font-size: 5em;
+  text-align: center;
+  justify-content: center;
+  margin-top: 4em;
+  margin-bottom: 7em;
+}
+
+.about {
+  display: flex;
+  font-size: 3.7em;
+  text-align: center;
+  justify-content: center;
+  margin: 2em 4em 2em 4em;
+  border-left: 10px solid white;
+  margin-bottom: 10em;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25em;
+  margin-right: 22em;
+}
+
+.project span {
+  font-size: 5em;
+  margin-bottom: 1em;
+  text-decoration: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer span {
+  font-size: 2em;
+  margin: 1em;
+}
