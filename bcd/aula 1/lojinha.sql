@@ -12,3 +12,4 @@ create table Clientes (
 
 describe Clientes;
 
+show tables;
