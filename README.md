@@ -8,7 +8,7 @@
 -  LIMA - Linguagem de Marcação
 -  SOP - Sistemas Operacionais
 
-### 2º semestre
+### 2º Semestre
 
 -  PWBE - Programação Web Back-End
 -  PWFE - Programação Web Front-End
