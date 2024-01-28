@@ -1,0 +1,54 @@
+*{
+    margin: 7px;
+}
+
+main{
+    height: 92vh;
+    width: 95vw;
+}
+
+.container1{
+    display: flex;
+    height: 30.33%;
+    width: 100%;
+    justify-content: center;
+    
+}
+
+.container2{
+    display: flex;
+    height: 30.33%;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.container3{
+    display: flex;
+    height: 30.33%;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.red{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+}
+
+.green{
+    background-color: greenyellow;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+}
+
+.blue{
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+
+}

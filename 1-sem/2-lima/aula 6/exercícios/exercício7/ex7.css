@@ -1,0 +1,46 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+}
+
+header{
+  height: 18%;
+  width: 100%;
+}
+
+main{
+  height: 64%;
+  width: 100%;
+}
+
+footer{
+  height: 18%;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+}
+
+.red{
+  background-color: red;
+  height: 100%;
+  width: 100%;
+}
+
+.color2{
+  background-color: rgb(172, 76, 76);
+  height: 618px;
+  width: 30%;
+}
+
+.marrom{
+  background-color: brown;
+  height: 618px;
+  width: 70%;
+}

@@ -1,1 +1,0 @@
-## HARE - Hardware e Redes

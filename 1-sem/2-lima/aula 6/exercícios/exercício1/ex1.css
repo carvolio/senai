@@ -1,0 +1,21 @@
+.l1{
+    margin: 10px;
+}
+
+.l2{
+    display: flex;
+}
+
+.l2 li{
+    margin: 10px;
+}
+
+.l3{
+    display: flex;
+    margin: 10px;
+}
+
+.l3 div{
+    margin: 10px;
+}
+

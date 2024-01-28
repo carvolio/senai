@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    /* height: 100vh; */
+    /* width: 100vh; */
+}
+
+header{
+    height: 500px;
+    width: 500px;
+}
+
+main{
+    height: 800px;
+    width: 800px;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.tabela div{
+    margin: 5px;
+}
+
+.text1{
+    width: calc(116% - 1px);
+    border-bottom: 1px solid black;
+}
+
+footer{
+    height: 500px;
+    width: 500px;
+}
