@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>biblioteca</title>
+</head>
+<body>
+    <header>
+        <h1>listar todos os livros</h1>
+    </header>
+    <nav>
+        <a href="./index.html">Listar todos</a>
+        <a href="./form.html">Cadastrar</a>
+    </nav>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>nome</th>
+                    <th>autor</th>
+                    <th>publicacao</th>
+                    <th>X</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+            </tbody>
+        </table>
+    </main>
+    <footer>by guilherme</footer>
+</body>
+<script>
+    const dados = document.getElementById('dados');
+    fetch('http://localhost:3000/livros')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(cli => {
+                dados.innerHTML += `
+                    <tr>
+                        <td class="id_ex">${cli.id}</td>
+                        <td>${cli.nome}</td>
+                        <td>${cli.autor}</td>
+                        <td>${cli.publicacao.split("T")[0]}</td>
+                        <!--td><button><a style="color: black" href="http://localhost:3000/delete/${cli.id}">X</a></button></td!-->
+                        <td><button onclick="bnt_ex(this)">X</button></td>
+                    </tr>
+                `;
+            });
+        });
+</script>
+<script src="fetch.js"></script>
+<script src="../back/server.js"></script>
+</html>

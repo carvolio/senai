@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PapelTudo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Inventário - Papelaria PapelTudo</h1>
+        <form action="http://localhost:3000/item" method="POST">
+            <input type="text" placeholder="Nome">
+            <input type="text" placeholder="Descrição">
+            <input type="number" placeholder="Valor">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>*</th>
+                    <th>x</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+<script src="script.js"></script>
+</html>

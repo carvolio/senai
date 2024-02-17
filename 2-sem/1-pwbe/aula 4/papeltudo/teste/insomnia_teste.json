@@ -1,0 +1,14 @@
+{
+    "name": "Nome do Teste",
+    "request": {
+      "method": "GET",
+      "url": "http://localhost:3000",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "chave": "valor"
+      }
+    }
+  }
+  

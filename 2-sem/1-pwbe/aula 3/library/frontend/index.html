@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <header>Library's Books</header>
+    <main>
+        <form action="http://localhost:3000/Books" method="post">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="autor" placeholder="Autor" required>
+            <input type="date" name="publicacao" placeholder="Publicação" required>
+            <input type="submit" value="enviar">
+        </form>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Autor</th>
+                    <th>Publicação</th>
+                    <th>X</th>
+                </tr>
+            </thead>
+            <tbody id="dados">
+            </tbody>
+        </table>
+    </main>
+    <footer></footer>
+</body>
+<script src="../backend/index.js"></script>
+<script>
+    const dados = document.getElementById('dados');
+    fetch('http://localhost:3000/Books')
+        .then(res => res.json())
+        .then(res => {
+            res.forEach(cli => {
+                dados.innerHTML += `
+                    <tr>
+                        <td>${cli.id}</td>
+                        <td>${cli.nome}</td>
+                        <td>${cli.autor}</td>
+                        <td>${cli.publicacao.split("T")[0]}</td>
+                        <td><button onclick="bnt_ex(${cli.id})" style="color: black">X</button></td>
+                    </tr>
+                `;
+            });
+        });
+        function bnt_ex (id){
+    const request = new Request (`https://localhost:3000/delete/${id}`, {
+        method: "DELETE",
+        headers: new Headers({ "Content-Type": "application/json" })
+    });
+
+    fetch(request)
+        .then(response => response.json)
+        .then(response => console.log(response));
+};  
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>biblioteca</title>
+</head>
+<body>
+    <header>
+        <h1>cadastro de livros</h1>
+    </header>
+    <nav>
+        <a href="./index.html">Listar todos</a>
+        <a href="./form.html">Cadastrar</a>
+    </nav>
+    <main>
+        <form action="http://localhost:3000/livros" method="post">
+            <input type="text" name="nome" placeholder="nome" required>
+            <input type="text" name="autor" placeholder="autor" required>
+            <input type="date" name="publicacao" placeholder="publicação" required>
+            <input type="submit" value="enviar">
+        </form>
+    </main>
+    <footer>
+        By guilherme
+    </footer>
+</body>
+</html>
