@@ -9,10 +9,10 @@
 <body>
     <header>
         <h1>Inventário - Papelaria PapelTudo</h1>
-        <form action="http://localhost:3000/item" method="POST">
-            <input type="text" placeholder="Nome">
-            <input type="text" placeholder="Descrição">
-            <input type="number" placeholder="Valor">
+        <form id="criar">
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="descricao" placeholder="Descrição" required>
+            <input type="number" name="valor" placeholder="Valor" required>
             <button type="submit">Cadastrar</button>
         </form>
     </header>
@@ -24,15 +24,17 @@
                     <th>Nome</th>
                     <th>Descrição</th>
                     <th>Valor</th>
-                    <th>*</th>
-                    <th>x</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody id="dados">
             </tbody>
         </table>
     </main>
-    <footer></footer>
+    <footer>
+        <h2 class="valorTotal"></h2>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>
