@@ -17,3 +17,7 @@ body {
 .card {
     margin: 2em;
 }
+
+#modal1 {
+    display: none;
+}
