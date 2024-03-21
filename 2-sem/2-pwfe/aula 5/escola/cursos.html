@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Escola Conexão</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -20,44 +20,142 @@
                         <a class="nav-link" href="matricula.html">Matricula</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline-none" type="submit">Email</button>
+                        <button class="btn btn-outline-none" id="btnEmail" type="submit">Email</button>
                     </li>
                 </ul>
             </div>
         </div>
 
+        <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modalEmail" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Email</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="d-flex justify-content-center align-items-center">
+                  <form>
+                      <div class="form-group">
+                          <label>Nome:</label>
+                          <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group">
+                          <label>Email:</label>
+                          <input type="text" class="form-control">
+                      </div>
+                      <textarea class="form-control mt-3 mb-3" id="exampleFormControlTextarea1" rows="3">Descrição</textarea>
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
     </nav>
+
     <main>
-        <div class="container d-flex justify-content-center">
-            <div class="row row-cols-2">
-              <div class="col d-flex flex-column">
-                <img src="https://a.cdn-hotels.com/gdcs/production8/d844/adb584fd-fe94-4d86-ba86-f42e851f4ae9.jpg" class="float-stars img-thumbnail" alt="...">
+        <div class="container">
+            <div class="row row-cols-2 d-flex justify-content-center">
+              <div class="col d-flex flex-column align-items-center">
+                <img src="https://a.cdn-hotels.com/gdcs/production8/d844/adb584fd-fe94-4d86-ba86-f42e851f4ae9.jpg" alt="...">
                 <span class="fs-3">Curso de Espanhol</span>
-                <button class="btn btn-outline-info justify-content-end ml-4">Detalhes</button>
+                <button class="btn btn-outline-info justify-content-end ml-4 mb-5" id="bnt1">Detalhes</button>
               </div>
-              <div class="col d-flex flex-column">
-                <img src="https://d500.epimg.net/cincodias/imagenes/2020/03/04/lifestyle/1583317510_401870_1583317553_noticia_normal.jpg" class="float-stars img-thumbnail" alt="...">
+              <div class="col d-flex flex-column align-items-center">
+                <img src="https://d500.epimg.net/cincodias/imagenes/2020/03/04/lifestyle/1583317510_401870_1583317553_noticia_normal.jpg" alt="...">
                 <span class="fs-3">Curso de Excel</span>
-                <button class="btn btn-outline-info justify-content-end ml-4">Detalhes</button>
+                <button class="btn btn-outline-info justify-content-end ml-4 mb-5" id="bnt2">Detalhes</button>
               </div>
-              <div class="col d-flex flex-column">
-                <img src="https://universodoc.com.br/wp-content/uploads/2020/10/Portal-8-dicas-para-economizar-tempo-no-consult%C3%B3rio.png" class="float-stars img-thumbnail" alt="...">
+              <div class="col d-flex flex-column align-items-center">
+                <img src="https://universodoc.com.br/wp-content/uploads/2020/10/Portal-8-dicas-para-economizar-tempo-no-consult%C3%B3rio.png" alt="...">
                 <span class="fs-3">Curso de Gestão de Tempo</span>
-                <button class="btn btn-outline-info justify-content-end ml-4">Detalhes</button>
+                <button class="btn btn-outline-info justify-content-end ml-4 mb-5" id="bnt3">Detalhes</button>
               </div>
-              <div class="col d-flex flex-column">
-                <img src="https://www.terraruiva.pt/wp-content/uploads/2019/08/culin%C3%A1ria-vegana.jpg" class="float-stars img-thumbnail" alt="...">
+              <div class="col d-flex flex-column align-items-center">
+                <img src="https://www.terraruiva.pt/wp-content/uploads/2019/08/culin%C3%A1ria-vegana.jpg" alt="...">
                 <span class="fs-3">Curso de Culinária Vegana</span>
-                <button class="btn btn-outline-info justify-content-end ml-4">Detalhes</button>
+                <button class="btn btn-outline-info justify-content-end ml-4 mb-5" id="bnt4">Detalhes</button>
               </div>
-              <div class="col d-flex flex-column">
-                <img src="https://www.blogdelfotografo.com/wp-content/uploads/2015/11/Curso-de-Fotografia-1.jpg" class="float-stars img-thumbnail" alt="...">
+              <div class="col d-flex flex-column align-items-center">
+                <img src="https://www.blogdelfotografo.com/wp-content/uploads/2015/11/Curso-de-Fotografia-1.jpg" alt="...">
                 <span class="fs-3">Curso de Fotografia</span>
-                <button class="btn btn-outline-info justify-content-end ml-4">Detalhes</button>
+                <button class="btn btn-outline-info justify-content-end ml-4 mb-5" id="bnt5">Detalhes</button>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modal1" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Curso de Espanhol</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Com este curso, você vai desvendar a cultura hispânica e se comunicar com confiança em qualquer lugar do mundo. Aprenda a gramática de forma natural e divertida, pratique conversação com falantes nativos e explore a riqueza cultural da América Latina e da Espanha.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" aria-labelledby="modal2Label" id="modal2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Curso de Excel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Transforme seus dados em insights valiosos, automatize tarefas repetitivas e crie planilhas profissionais que impressionarão a todos. Este curso te dará as ferramentas e habilidades para otimizar seu tempo e alcançar seus objetivos com mais eficiência.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modal3" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Curso de Gestão de Tempo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Aprenda a eliminar os ladrões de tempo, criar um plano de ação personalizado e desenvolver hábitos saudáveis que te darão mais energia e foco. Este curso te guiará na jornada de alcançar seus objetivos pessoais e profissionais com mais produtividade e menos estresse.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modal4" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Curso de Culinária Vegana</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Descubra um mundo de sabores e aromas com receitas nutritivas e deliciosas. Explore ingredientes frescos e da estação, aprenda técnicas culinárias inovadoras e abrace um estilo de vida mais saudável e sustentável..</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modal5" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Curso de Fotografia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Aprenda a usar sua câmera como um verdadeiro profissional, domine técnicas de composição e edição, e desenvolva sua visão artística para criar fotos que expressem sua criatividade e emoção.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
     </main>
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </html>

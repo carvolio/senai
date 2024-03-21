@@ -1,0 +1,26 @@
+{
+  "name": "app-aula6",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~3.1.3",
+    "bootstrap": "^5.3.3",
+    "expo": "~50.0.13",
+    "expo-status-bar": "~1.11.1",
+    "react": "18.2.0",
+    "react-bootstrap": "^2.10.1",
+    "react-dom": "18.2.0",
+    "react-native": "0.73.5",
+    "react-native-web": "~0.19.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  },
+  "private": true
+}

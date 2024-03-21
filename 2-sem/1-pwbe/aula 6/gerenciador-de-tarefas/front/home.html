@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/work-process (1).png">
+    <title>OrganiZen</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <a class="navbar-brand" style="color: white" href="home.html">OrganiZen</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button type="button" style="color: white;" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalEnter" data-bs-whatever="@mdo">Enter</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="modalEnter">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Enter</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-outline-info m-3" data-bs-toggle="modal" data-bs-target="#modalLogin" data-bs-whatever="@mdo">Login</button>
+                    <button type="button" class="btn btn-outline-info m-3" data-bs-toggle="modal" data-bs-target="#modalCadastro" data-bs-whatever="@mdo">Cadastrar</button>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="modalLogin">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="formLogin">
+                        <label>Email</label>
+                        <input type="email" name="emailLogin" placeholder="Digite seu email..." required>
+                        <label>Senha</label>
+                        <input type="password" name="senhaLogin" placeholder="Digite a sua senha..." required>
+                        <button class="btn btn-outline-info" id="btnLogin" type="submit">Fazer Login</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" id="modalCadastro">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Cadastro</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+    </nav>
+    <main class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="container d-flex flex-column justify-content-center align-items-center m-5">
+            <img src="assets/work-process.png" alt="...">
+            <span class="fs-1 mt-5 mb-3 text-info">"Liberte sua mente e conquiste seus objetivos!"</span>
+            <span class="fs-3 m-2 text-info">Com o OrganiZen, você transforma o caos em clareza e gerencia suas tarefas com maestria.</span>
+            <span class="fs-3 m-2 text-info">Organize sua vida, maximize sua produtividade e alcance a paz interior.</span>
+        </div>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</html>
