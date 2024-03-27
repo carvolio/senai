@@ -16,3 +16,21 @@ main div img {
 #modalEnter {
     display: none;
 };
+
+main div div form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    border-radius: 1.5em;
+    border: 0px solid black;
+    padding: 15px;
+    outline: none;
+}
+
+textarea {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1em;
+}

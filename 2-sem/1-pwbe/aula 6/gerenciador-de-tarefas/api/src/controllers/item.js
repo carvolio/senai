@@ -12,8 +12,7 @@ const login = (req, res) => {
                 // app.get('http//localhost:3000/login', (req, res) => {
                 //     res.redirect('http//localhost:3000/read');
                 // })
-                res.send("bobalhão");
-                res.redirect("http://127.0.0.1:5500/front/tarefas.html");
+                res.send("ok");
             } else {
             }
         });
@@ -45,8 +44,9 @@ const read = (req, res) => {
     con.query("SELECT * FROM Tarefas ORDER BY id_tarefas DESC", (err, result) => {
         if (err)
             res.json(err);
-        else
-            res.json(result);
+        else {
+            res.status(202).json(result).end();
+        }
     });
 }
 

@@ -12,7 +12,7 @@ router.post("/login", Item.login);
 router.post("/cadastro", Item.cadastro)
 router.get("/read", Item.read);
 router.post("/create", Item.create);
-router.put("/update/:id_tarefas", Item.update);
-router.delete("/delete/:id_tarefas", Item.del);
+router.put("/:id_tarefas", Item.update);
+router.delete("/:id_tarefas", Item.del);
 
 module.exports = router;

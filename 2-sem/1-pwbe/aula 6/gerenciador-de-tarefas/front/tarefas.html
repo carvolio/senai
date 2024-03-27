@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/work-process (1).png">
     <title>Document</title>
 </head>
 <body>
-    <p>Eu sou a tarefas, prazer em te conhecer!</p>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container">
+            <a class="navbar-brand" style="color: white" href="home.html">OrganiZen</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <button style="color: white;" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalTarefa" data-bs-whatever="@mdo">Adicionar Tarefa</button>
+                        <button style="color: white;" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalContato" data-bs-whatever="@mdo">Contato</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+    
+        <div class="modal" tabindex="-1" id="modalTarefa">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adicionar Tarefa</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <form id="criar" class="d-flex flex-column">
+                        <input type="text" name="descricao" placeholder="Digite a descrição" required>
+                        <input type="date" name="dataVencimento" placeholder="Digite a data de vencimento" required>
+                        <input type="text"" name="status" placeholder="Digite o status" required>
+                        <input type="text" name="id_usuarios" placeholder="Defina o responsavel" required>
+                        <button class="btn" type="submit">Criar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="modal" tabindex="-1" id="modalContato">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Contato</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center align-items-center">
+                    <form id="criar" class="d-flex flex-column">
+                        <input type="text" name="descricao" placeholder="Digite seu nome" required>
+                        <input type="tel" name="dataVencimento" placeholder="Digite seu telefone" required>
+                        <input type="email"" name="status" placeholder="Digite seu email" required>
+                        <textarea name="" id="" cols="25" rows="3">Digite a descrição</textarea>
+                        <button class="btn" type="submit">Enviar</button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="container">
+            <table class="table table-borderless mt-5">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>descrição</th>
+                        <th>data de vencimento</th>
+                        <th>status</th>
+                        <th>responsavel</th>
+                        <th>editar</th>
+                        <th>excluir</th>
+                    </tr>
+                </thead>
+                <tbody id="dados"></tbody>
+            </table>
+        </div>
+    </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="script.js"></script>
 </html>
