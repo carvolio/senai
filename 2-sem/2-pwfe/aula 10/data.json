@@ -1,76 +1,76 @@
 [
     {
-        "name":  "Guilty Gear",
+        "name":  "Pura Vibes",
         "author": "caroliflow",
-        "cover": "",
+        "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
         "musics": [
             {
-                "name": "Smell of the Game",
-                "author": "Naoki",
-                "cover": "./assets/covers/guilty-gear-cover.jpg",
-                "src": "./assets/songs/playlist1/Smell-of-the-Game.mp3"
+                "name": "Duvet",
+                "author": "Boa",
+                "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
+                "src": "./assets/songs/Bôa -  Duvet (Official Video).mp3"
             },
             {
-                "name": "Love the Subhuman Self",
-                "author": "Naoki",
-                "cover": "./assets/covers/guilty-gear-cover.jpg",
-                "src": "./assets/songs/playlist1/Love-the-Subhuman-Self.mp3"
+                "name": "Burning Pile",
+                "author": "Mother Mother",
+                "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
+                "src": "./assets/songs/Mother Mother - Burning Pile (Official English Lyric Video).mp3"
             },
             {
-                "name": "Drift",
-                "author": "Naoki",
-                "cover": "./assets/covers/guilty-gear-cover2.jpg",
-                "src": "./assets/songs/playlist1/Drift.mp3"
+                "name": "White Rabbit",
+                "author": "Jefferson Airplane",
+                "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
+                "src": "./assets/songs/Jefferson Airplane - White Rabbit (Audio).mp3"
             }
         ]
     },
     {
-        "name": "Nessa eu infarto",
-        "author": "Bruno",
-        "cover": "./assets/covers/icdd.jpg",
+        "name": "Muito Boa",
+        "author": "caroliflow",
+        "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
         "musics": [
             {
-                "name": "Misogibarai",
-                "author": "Imperial Circus Dead Decadence",
-                "cover": "./assets/covers/icdd.jpg",
-                "src": "./assets/songs/playlist2/icdd1.mp3"
+                "name": "Violence",
+                "author": "Grimes",
+                "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
+                "src": "./assets/songs/Grimes & i_o - Violence (Official Video).mp3"
             },
             {
-                "name": "YoRHa",
-                "author": "Imperial Circus Dead Decadence",
-                "cover": "./assets/covers/icdd.jpg",
-                "src": "./assets/songs/playlist2/icdd2.mp3"
+                "name": "",
+                "author": "Grimes",
+                "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
+                "src": ""
             },
             {
                 "name": "Yomi yori Kikoyu",
                 "author": "Imperial Circus Dead Decadence",
-                "cover": "./assets/covers/icdd.jpg",
-                "src": "./assets/songs/playlist2/icdd3.mp3"
+                "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
+                "src": ""
             }
         ]
     },
     {
         "name": "Churras",
-        "author": "Bruno",
-        "cover": "./assets/covers/pericles.jpg",
+        "author": "caroliflow",
+        "cover": "https://lh3.googleusercontent.com/psGpsLhb-PK5Z1puknAfvkyGRDjIcPauGOb-Rs4jPdJn6eB9lAs3RrqsXBaGeBK2h36V1mobYMZrWT7AXQ=w544-h544-l90-rj",
         "musics": [
             {
                 "name": "Até que Durou",
                 "author": "Pericles",
-                "cover": "./assets/covers/pericles.jpg",
-                "src": "./assets/songs/playlist3/Ate-Que-Durou.mp3"
+                "cover": "https://lh3.googleusercontent.com/psGpsLhb-PK5Z1puknAfvkyGRDjIcPauGOb-Rs4jPdJn6eB9lAs3RrqsXBaGeBK2h36V1mobYMZrWT7AXQ=w544-h544-l90-rj",
+                "src": ""
             },
             {
                 "name": "Boate Azul",
                 "author": "Joaquim e Manuel",
-                "cover": "./assets/covers/boate-azul.jpg",
-                "src": "./assets/songs/playlist3/Boate-Azul.mp3"
+                "cover": "https://lh3.googleusercontent.com/psGpsLhb-PK5Z1puknAfvkyGRDjIcPauGOb-Rs4jPdJn6eB9lAs3RrqsXBaGeBK2h36V1mobYMZrWT7AXQ=w544-h544-l90-rj",
+                "src": ""
             },
             {
                 "name": "Amiga da Minha Mulher",
                 "author": "Seu Jorge",
-                "cover": "./assets/covers/mulher.jpg",
-                "src": "./assets/songs/playlist3/Amiga-da-Minha-Mulher.mp3"
+                "cover": "https://lh3.googleusercontent.com/psGpsLhb-PK5Z1puknAfvkyGRDjIcPauGOb-Rs4jPdJn6eB9lAs3RrqsXBaGeBK2h36V1mobYMZrWT7AXQ=w544-h544-l90-rj",
+                "src": ""
             }
         ]
     }

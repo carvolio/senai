@@ -8,16 +8,16 @@
     <title>Escuta ai!</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #9eede3;">
+    <nav class="navbar navbar-expand-lg" style="background-color: #005C53">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="index.html" style="color: white">Home</a>
             <div class="collapse navbar-collapse justify-content-end">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalSobre" data-bs-whatever="@mdo">Quem Somos</button>
+                        <button type="button" style="color: white" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalSobre" data-bs-whatever="@mdo">Quem Somos</button>
                     </li>
                     <li class="nav-item">
-                        <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalSua" data-bs-whatever="@mdo">Peça Sua Música</button>
+                        <button type="button" style="color: white" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalSua" data-bs-whatever="@mdo">Peça Sua Música</button>
                     </li>
                 </ul>
             </div>
@@ -74,8 +74,8 @@
         <main>
 
             <div class="player" id="player">
-                <img src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Album-Cover" class="music-cover">
-                <h2 class="player-title">Title</h2>
+                <img id="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Album-Cover" class="music-cover">
+                <h2 id="title" class="player-title">Title</h2>
                 <audio id="audio-player" controls>
                     <source src="#">
                 </audio>
@@ -95,24 +95,24 @@
             <section>
 
            <div class="albuns" id="albuns">
-                <div class="card" style="background-color: #9eede3;">
+                <div class="card" style="background-color: #DBF227;">
                     <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
                     <span class="title">O MY S2</span>
                     <span class="author">caroliflow</span>
                 </div>
-                <div class="card" style="background-color: #9eede3;">
+                <div class="card" style="background-color: #DBF227;">
                     <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
                     <span class="title">STICKS</span>
                     <span class="author">Bruno Otávio</span>
                 </div>
-                <div class="card" style="background-color: #9eede3;">
+                <div class="card" style="background-color: #DBF227;">
                     <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
                     <span class="title">EUREKA</span>
                     <span class="author">Bianca Nunes</span>
                 </div>
            </div>
 
-           <div class="songs" id="songs">
+           <div class="songs" id="songs-container">
                 <div class="song">
                     <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Song Cover">
                     <div class="info">
