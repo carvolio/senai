@@ -1,0 +1,77 @@
+[
+    {
+        "name":  "Guilty Gear",
+        "author": "caroliflow",
+        "cover": "",
+        "musics": [
+            {
+                "name": "Smell of the Game",
+                "author": "Naoki",
+                "cover": "./assets/covers/guilty-gear-cover.jpg",
+                "src": "./assets/songs/playlist1/Smell-of-the-Game.mp3"
+            },
+            {
+                "name": "Love the Subhuman Self",
+                "author": "Naoki",
+                "cover": "./assets/covers/guilty-gear-cover.jpg",
+                "src": "./assets/songs/playlist1/Love-the-Subhuman-Self.mp3"
+            },
+            {
+                "name": "Drift",
+                "author": "Naoki",
+                "cover": "./assets/covers/guilty-gear-cover2.jpg",
+                "src": "./assets/songs/playlist1/Drift.mp3"
+            }
+        ]
+    },
+    {
+        "name": "Nessa eu infarto",
+        "author": "Bruno",
+        "cover": "./assets/covers/icdd.jpg",
+        "musics": [
+            {
+                "name": "Misogibarai",
+                "author": "Imperial Circus Dead Decadence",
+                "cover": "./assets/covers/icdd.jpg",
+                "src": "./assets/songs/playlist2/icdd1.mp3"
+            },
+            {
+                "name": "YoRHa",
+                "author": "Imperial Circus Dead Decadence",
+                "cover": "./assets/covers/icdd.jpg",
+                "src": "./assets/songs/playlist2/icdd2.mp3"
+            },
+            {
+                "name": "Yomi yori Kikoyu",
+                "author": "Imperial Circus Dead Decadence",
+                "cover": "./assets/covers/icdd.jpg",
+                "src": "./assets/songs/playlist2/icdd3.mp3"
+            }
+        ]
+    },
+    {
+        "name": "Churras",
+        "author": "Bruno",
+        "cover": "./assets/covers/pericles.jpg",
+        "musics": [
+            {
+                "name": "Até que Durou",
+                "author": "Pericles",
+                "cover": "./assets/covers/pericles.jpg",
+                "src": "./assets/songs/playlist3/Ate-Que-Durou.mp3"
+            },
+            {
+                "name": "Boate Azul",
+                "author": "Joaquim e Manuel",
+                "cover": "./assets/covers/boate-azul.jpg",
+                "src": "./assets/songs/playlist3/Boate-Azul.mp3"
+            },
+            {
+                "name": "Amiga da Minha Mulher",
+                "author": "Seu Jorge",
+                "cover": "./assets/covers/mulher.jpg",
+                "src": "./assets/songs/playlist3/Amiga-da-Minha-Mulher.mp3"
+            }
+        ]
+    }
+]
