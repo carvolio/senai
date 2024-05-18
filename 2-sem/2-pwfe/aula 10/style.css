@@ -3,11 +3,16 @@
     padding: 0;
 }
 
+body {
+    display: absolute;
+}
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3em;
+    height: 81.2vh;
 }
 
 /*
@@ -76,11 +81,10 @@ section {
 
 }
 
-.albuns .card {
+.albuns .card {     
     border-radius: 5px;
     cursor: pointer;
-    background-color: #F28705;
-    color: #042940;
+    color: #9EEDE3;
 }
 
 .albuns .card img {
@@ -132,3 +136,9 @@ section {
     width: 5rem;
 }
 
+footer{
+    background-color: #005C53;
+    width: 100vw;
+    height: 7vh;
+    display: flex;
+}
