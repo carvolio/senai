@@ -1,0 +1,112 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Nunito Sans", sans-serif; 
+    font-weight: 200;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+body {
+    /* background-color: #A09CB0; */
+    background-color: #023047;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+    width: 100%;
+    /* align-items: center; */
+}
+
+.cardDestinos {
+    /* background-color: #A3B9C9; */
+    background-color: #fb8500;
+    /* color: white; */
+    border: solid 0px;
+    margin: 2em;
+    padding: 3.4em;
+    font-weight: 350;
+    width: 23em;
+}
+
+.cardPontos {
+    /* background-color: #ABDAE1; */
+    background-color: #ffb703;
+    margin: 0.5em;
+    border: solid 0px;
+    width: auto;
+    word-wrap: break-all;
+}
+
+.cardHoteis {
+    /* background-color: #ABDAE1; */
+    background-color: #ffb703;
+    margin: 0.5em;
+    border: solid 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+.header1 {
+    width: 29em;
+}
+
+.header2 {
+    width: 30em;
+}
+
+.header3 {
+    width: 30em;
+}
+
+.icon1 {
+    height: 2em;
+    width: 2em;
+    margin: 0.4em 0.4em 0.4em 0em;
+    opacity: 0.8;
+}
+
+.icon2 {
+    height: 1.4em;
+    width: 1.4em;
+    margin: 0em 0.5em 0.5em 0em;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.icon3 {
+    height: 1em;
+    width: 1em;
+    margin: 0.2em 0.2em 0.2em 0em;
+    opacity: 0.8;
+}
+
+.icon3-2 {
+    height: 1em;
+    width: 1em;
+    margin: 0em 0.2em 0.2em 0em;
+    opacity: 0.8;
+}
+
+input {
+    border-radius: 0.2em;
+    border: solid 0px #023047;
+    outline: none;
+    /* color: #023047;
+    font-weight: 700; */
+    margin: 0.3em;
+    padding: 0.5em;
+}
+
+.modal-header {
+    border-bottom: none; 
+  }

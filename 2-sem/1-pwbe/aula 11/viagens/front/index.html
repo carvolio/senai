@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/map-pin.svg" type="image/x-icon">
+    <title>Aventuras & Cia</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg d-flex justify-content-center" style="background-color: #219ebc;">
+        <div class="header1"><span></span></div>
+        <div class="d-flex justify-content-center ms-5 header2">
+            <img src="./assets/map-pin.svg" class="icon1">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <span class="fs-2" style="font-weight: 300;">Aventuras & Cia</span>
+                <span class="fs-5 me-4" style="font-weight: 200;">Agência de Viagem</span>
+            </div>
+            
+        </div>
+        <div class="collapse navbar-collapse justify-content-center header3">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalAdd" data-bs-whatever="@mdo"><img src="./assets/plus.svg"></img></button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="btnEdit" class="btn btn-outline-none"><img src="./assets/edit-2.svg" class="w-75"></img></button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" id="btnApply" class="btn btn-outline-none hidden"><img src="./assets/edit-2.svg" class="w-75"></img></button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Modal com as opções para me levar ao outros modais -->
+        <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modalAdd" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background-color: #8ecae6; font-weight: 400;">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adicionar</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalDestino" data-bs-whatever="@mdo">Destino</button>
+                    <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalPonto" data-bs-whatever="@mdo">Ponto</button>
+                    <button type="button" class="btn btn-outline-none" data-bs-toggle="modal" data-bs-target="#modalHotel" data-bs-whatever="@mdo">Hotéis</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Modal Para o a criação de Destinos -->
+          <div class="modal" tabindex="-1" aria-labelledby="modal1Label" id="modalDestino" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background-color: #8ecae6; font-weight: 400;">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adicionar Destino</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <form id="addDestino" class="d-flex flex-column">
+                        <input type="text" name="nomeDestino" placeholder="Digite o nome..." required>
+                        <input type="text" name="valorDestino" placeholder="Digite o valor..." required>
+                        <input type="date" name="date" placeholder="Escolha a data..." required>
+                        <button class="btn" type="submit">Criar</button>
+                    </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal para adicinar os Pontos -->
+          <div class="modal" tabindex="-1" aria-labelledby="modal2Label" id="modalPonto" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background-color: #8ecae6; font-weight: 400;">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adicionar Ponto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <form id="addPonto" class="d-flex flex-column">
+                        <input type="number" name="idDestino" placeholder="Digite o destino..." required>
+                        <input type="text" name="endereco" placeholder="Digite o endereço..." required>
+                        <input type="text" name="telefone" placeholder="Digite o telefone..." required>
+                        <input type="text" name="valorPonto" placeholder="Digite o valor..." required>
+                        <button class="btn" type="submit">Criar</button>
+                    </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal para adicinar os Hoteis -->
+          <div class="modal" tabindex="-1" aria-labelledby="modal3Label" id="modalHotel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content" style="background-color: #8ecae6; font-weight: 400;">
+                <div class="modal-header">
+                  <h5 class="modal-title">Adicionar Hotel</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="d-flex justify-content-center align-items-center">
+                    <form id="addHotel" class="d-flex flex-column">
+                        <input type="number" name="idDestinoHotel" placeholder="Digite o destino..." required>
+                        <input type="text" name="nomeHotel" placeholder="Digite o nome..." required>
+                        <input type="text" name="valorHotel" placeholder="Digite o valor..." required>
+                        <input type="text" name="avaliacao" placeholder="Digite a avaliação..." required>
+                        <input type="text" name="email" placeholder="Digite o email..." required>
+                        <input type="text" name="site" placeholder="Digite o site..." required>
+                        <button class="btn" type="submit">Criar</button>
+                    </form>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </nav>
+    <main>
+        <div class="container row row-cols-4 ">
+            <div class="cardDestinos card hidden col">
+                <div class="d-flex justify-content-end hidden">
+                    <button type="button" id="btnEditDestino" class="btn btn-outline-none"><img src="./assets/edit3.svg" class="w-75"></img></button>
+                    <button type="button" id="btnEditDestino" class="btn btn-outline-none"><img src="./assets/x-square.svg" class="w-75"></img></button>
+                </div>
+                <hr>
+                <div class="card-body">
+                    <div class="d-flex">
+                        <img src="./assets/map-pin.svg" class="icon1">
+                        <div class="nomeDestino card-title fs-3"></div>
+                    </div>
+                    <div class="d-flex">
+                        <img src="./assets/dollar-sign.svg" class="icon3">
+                        <div class="valorDestino"></div>
+                    </div>
+                    <div class="d-flex">
+                        <img src="./assets/calendar.svg" class="icon3">
+                        <div class="data"></div>
+                    </div>
+                    
+                </div>
+                <div class="cardPontos card"> </div>
+                <div class="cardHoteis card"></div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</html>
