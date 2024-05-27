@@ -76,7 +76,7 @@ const mostrar = () => {
                     </div>
                     <div>
                         <img src="./assets/at-sign.svg" class="icon3-2">
-                        <span>${hotel.email}</br></span>
+                        <span">${hotel.email}</br></span>
                     </div>
                     <div>
                         <img src="./assets/chrome.svg" class="icon3-2">
@@ -177,15 +177,3 @@ btnApply.addEventListener('click', () => {
     update();
 });
 
-const ableEdit = () => {
-    console.log(nomeDestino);
-    for (let i = 0; i < nomeDestino.length; i++) {
-        nd = nomeDestino[i];
-        nd.setAttribute('contenteditable', 'true');
-    }
-    nomeDestino[0].setAttribute('contenteditable', 'true');
-};
-
-const update = (e) => {
-    console.log("ok2");
-};

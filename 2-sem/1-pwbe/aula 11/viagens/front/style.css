@@ -65,7 +65,7 @@ main {
 }
 
 .header3 {
-    width: 30em;
+    width: 15em;
 }
 
 .icon1 {
@@ -110,3 +110,20 @@ input {
 .modal-header {
     border-bottom: none; 
   }
+
+footer {
+    background-color: black;
+    color: white;
+    height: 10em;
+    display: flex;
+    justify-content: center;
+}
+
+footer h4 {
+    padding-top: 2.5em;
+    margin-right: 1em;
+}
+
+footer i {
+    padding-top: 1.7em;
+}
