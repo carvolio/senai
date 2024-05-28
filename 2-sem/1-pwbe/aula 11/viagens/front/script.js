@@ -7,8 +7,9 @@ const addDestino = document.getElementById('addDestino');
 const addPonto = document.getElementById('addPonto');
 const addHotel = document.getElementById('addHotel');
 
-const btnEdit = document.getElementById('btnEdit');
-const btnApply = document.getElementById('btnApply');
+const btnEditDestino = document.getElementById('btnEditDestino');
+const btnDeleteDestino = document.getElementById('btnDeleteDestino');
+const btnApplyDestino = document.getElementById('btnApplyDestino');
 
 const nomeDestino = document.querySelectorAll('.nomeDestino');
 
@@ -165,15 +166,18 @@ addHotel.addEventListener('submit', e => {
     console.log(data);
 });
 
-btnEdit.addEventListener('click', () => {
-    btnApply.classList.toggle('hidden');
-    btnEdit.classList.toggle('hidden');
-    ableEdit();
+btnEditDestino.addEventListener('click', () => {
+    btnEditDestino.classList.toggle('hidden');
+    btnApplyDestino.classList.toggle('hidden');
+    editDestino();
 });
 
-btnApply.addEventListener('click', () => {
-    btnEdit.classList.toggle('hidden');
-    btnApply.classList.toggle('hidden');
-    update();
+btnApplyDestino.addEventListener('click', () => {
+    btnEditDestino.classList.toggle('hidden');
+    btnApplyDestino.classList.toggle('hidden');
+    updateDestino();
 });
 
+const editDestino = () => {
+    
+};
