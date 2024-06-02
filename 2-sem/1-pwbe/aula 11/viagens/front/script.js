@@ -8,8 +8,11 @@ const addPonto = document.getElementById('addPonto');
 const addHotel = document.getElementById('addHotel');
 
 const btnEditDestino = document.getElementById('btnEditDestino');
-const btnDeleteDestino = document.getElementById('btnDeleteDestino');
 const btnApplyDestino = document.getElementById('btnApplyDestino');
+const btnDeleteDestino = document.getElementById('btnDeleteDestino');
+
+const btnEditPonto = document.getElementById('btnEditPonto');
+const btnApplyPonto = document.getElementById('btnApplyPonto');
 
 const nomeDestino = document.querySelectorAll('.nomeDestino');
 
@@ -36,12 +39,13 @@ const mostrar = () => {
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
                         <button type="button" id="btnEditPonto" class="btn btn-outline-none"><img src="./assets/edit3.svg" class="w-75"></img></button>
+                        <button type="button" id="btnApplyPonto" class="btn btn-outline-none"><img src="./assets/save.svg" class="w-75"></img></button>
                         <button type="button" id="btnDeletePonto" class="btn btn-outline-none"><img src="./assets/x-square.svg" class="w-75"></img></button>
                     </div>
                     <hr>
-                    <div class="d-flex align-items-center text-center">
+                    <div class="d-flex align-items-center">
                         <img src="./assets/map.svg" class="icon2">
-                        <span class="card-title fs-4">${ponto.endereco}</br></span>
+                        <span class="title2">${ponto.endereco}</br></span>
                     </div>
                     <div>
                         <img src="./assets/phone.svg" class="icon3-2">
@@ -63,9 +67,9 @@ const mostrar = () => {
                         <button type="button" id="btnDeleteHotel" class="btn btn-outline-none"><img src="./assets/x-square.svg" class="w-75"></img></button>
                     </div>
                     <hr>
-                    <div class="d-flex align-items-center text-center">
+                    <div class="d-flex align-items-center">
                         <img src="./assets/home.svg" class="icon2">
-                        <span class="card-title fs-4">${hotel.nome}</br></span>
+                        <span class="title2">${hotel.nome}</br></span>
                     </div>
                     <div>
                         <img src="./assets/dollar-sign.svg" class="icon3-2">
@@ -166,18 +170,19 @@ addHotel.addEventListener('submit', e => {
     console.log(data);
 });
 
-btnEditDestino.addEventListener('click', () => {
+const editDestino = () => {console.log("editar destino ok")};
+const updateDestino = () => {console.log("update destino okk")};
+
+btnEditDestino.addEventListener('submit', () => {
+    console.log("ok destino");
     btnEditDestino.classList.toggle('hidden');
     btnApplyDestino.classList.toggle('hidden');
     editDestino();
 });
 
-btnApplyDestino.addEventListener('click', () => {
+btnApplyDestino.addEventListener('submit', () => {
     btnEditDestino.classList.toggle('hidden');
     btnApplyDestino.classList.toggle('hidden');
     updateDestino();
 });
 
-const editDestino = () => {
-    
-};
