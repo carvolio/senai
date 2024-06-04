@@ -19,6 +19,7 @@ const read = async (req, res) => {
         include : {
             pontos: {
                 select : {
+                    id: true,
                     endereco: true,
                     telefone: true,
                     valor: true

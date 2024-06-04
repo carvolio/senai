@@ -7,13 +7,6 @@ const addDestino = document.getElementById('addDestino');
 const addPonto = document.getElementById('addPonto');
 const addHotel = document.getElementById('addHotel');
 
-const btnEditDestino = document.getElementById('btnEditDestino');
-const btnApplyDestino = document.getElementById('btnApplyDestino');
-const btnDeleteDestino = document.getElementById('btnDeleteDestino');
-
-const btnEditPonto = document.getElementById('btnEditPonto');
-const btnApplyPonto = document.getElementById('btnApplyPonto');
-
 const nomeDestino = document.querySelectorAll('.nomeDestino');
 
 const mostrar = () => {
@@ -25,39 +18,81 @@ const mostrar = () => {
             console.log(destino);
 
             const card = cardDestinos.cloneNode(true);
+
+            const editBtn = card.querySelector('.btnEditDestino');
+            const applyBtn = card.querySelector('.btnApplyDestino');
+            const nomeDestino = card.querySelector('.nomeDestino');
+            const valorDestino = card.querySelector('.valorDestino');
+            const datas = card.querySelector('.data');
+
             card.classList.remove('hidden');
 
             card.querySelector('.nomeDestino').innerHTML = destino.nome;
             card.querySelector('.valorDestino').innerHTML = destino.valor;
             card.querySelector('.data').innerHTML = destino.data.split('T')[0];
 
+            editBtn.addEventListener('click', () => {
+                editBtn.classList.toggle('hidden');
+                applyBtn.classList.toggle('hidden');
+                editDestino(nomeDestino, valorDestino, datas);
+            });
+
+            applyBtn.addEventListener('click', () => {
+                editBtn.classList.toggle('hidden');
+                applyBtn.classList.toggle('hidden');
+                updateDestino(nomeDestino, valorDestino, datas, i);
+            });
+
             const cardPonto = cardPontos.cloneNode(true);
             const cardHotel = cardHoteis.cloneNode(true);
             
             destino.pontos.forEach((ponto) => {
+
                 cardPonto.innerHTML += `
                 <div class="card-body">
                     <div class="d-flex justify-content-end">
-                        <button type="button" id="btnEditPonto" class="btn btn-outline-none"><img src="./assets/edit3.svg" class="w-75"></img></button>
-                        <button type="button" id="btnApplyPonto" class="btn btn-outline-none"><img src="./assets/save.svg" class="w-75"></img></button>
-                        <button type="button" id="btnDeletePonto" class="btn btn-outline-none"><img src="./assets/x-square.svg" class="w-75"></img></button>
+                        <button type="button" class="btn btn-outline-none btnEditPonto"><img src="./assets/edit3.svg" class="w-75"></img></button>
+                        <button type="button" class="btn btn-outline-none btnApplyPonto hidden"><img src="./assets/save.svg" class="w-75"></img></button>
+                        <button type="button" class="btn btn-outline-none btnDeletePonto"><img src="./assets/x-square.svg" class="w-75"></img></button>
                     </div>
                     <hr>
                     <div class="d-flex align-items-center">
                         <img src="./assets/map.svg" class="icon2">
-                        <span class="title2">${ponto.endereco}</br></span>
+                        <span class="title2 nomePonto">${ponto.endereco}</br></span>
                     </div>
                     <div>
                         <img src="./assets/phone.svg" class="icon3-2">
-                        <span>${ponto.telefone}</br></span>
+                        <span class="telPonto">${ponto.telefone}</br></span>
                     </div>
                     <div>
                         <img src="./assets/dollar-sign.svg" class="icon3-2">
-                        <span>${ponto.valor}</br></span>
+                        <span class="valorPonto">${ponto.valor}</br></span>
                     </div>
                 </div>
                 `;
+
+                const idPonto = ponto.id;
+                const btnEditPonto = cardPonto.querySelector('.btnEditPonto');
+                const btnApplyPonto = cardPonto.querySelector('.btnApplyPonto');
+                const nomePonto = cardPonto.querySelector('.nomePonto');
+                const telPonto = cardPonto.querySelector('.telPonto');
+                const valorPonto = cardPonto.querySelector('.valorPonto');
+
+                btnEditPonto.addEventListener('click', () => {
+                    btnEditPonto.classList.toggle('hidden');
+                    btnApplyPonto.classList.toggle('hidden');
+                    editPontos(nomePonto, telPonto, valorPonto);
+                });
+
+                btnApplyPonto.addEventListener('click', () => {
+                    btnEditPonto.classList.toggle('hidden');
+                    btnApplyPonto.classList.toggle('hidden');
+                    updatePontos(nomePonto, telPonto, valorPonto, idPonto);
+                });
+
             });
+
+
 
             destino.hoteis.forEach(hotel => {
                 cardHotel.innerHTML += `
@@ -95,7 +130,7 @@ const mostrar = () => {
             card.appendChild(cardPonto);
             card.appendChild(cardHotel);
         });
-    })
+    });
 };
 
 
@@ -170,19 +205,48 @@ addHotel.addEventListener('submit', e => {
     console.log(data);
 });
 
-const editDestino = () => {console.log("editar destino ok")};
-const updateDestino = () => {console.log("update destino okk")};
+const editDestino = (nomeDestino, valorDestino, datas) => {
+    console.log("editar destino ok");
+    nomeDestino.setAttribute("contentEditable", "true");
+    valorDestino.setAttribute("contentEditable", "true");
+    datas.setAttribute("contentEditable", "true");
 
-btnEditDestino.addEventListener('submit', () => {
-    console.log("ok destino");
-    btnEditDestino.classList.toggle('hidden');
-    btnApplyDestino.classList.toggle('hidden');
-    editDestino();
-});
+};
 
-btnApplyDestino.addEventListener('submit', () => {
-    btnEditDestino.classList.toggle('hidden');
-    btnApplyDestino.classList.toggle('hidden');
-    updateDestino();
-});
+const updateDestino = (nomeDestino, valorDestino, datas, i) => {
+    console.log("update destino okk")
 
+    const editadoNome = nomeDestino.textContent;
+    const editVaDes = valorDestino.textContent;
+    const editDatas = datas.textContent;
+    
+    data = {
+        nome: editadoNome,
+        valor: editVaDes,
+        data: editDatas
+    };
+
+    console.log(data);
+
+    const query = `http://localhost:3000/destinos/${i + 1}`;
+    console.log(query);
+    fetch(query, {
+        method: 'PUT',
+        headers: {
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    });
+};
+
+const editPontos = (nomePonto, telPonto, valorPonto) => {
+    console.log("editar pontos ok");
+    nomePonto.setAttribute('contentEditable', 'true');
+    telPonto.setAttribute('contentEditable', 'true');
+    valorPonto.setAttribute('contentEditable', 'true');
+};
+
+const updatePontos = (nomePonto, telPonto, valorPonto, idPonto) => {
+    console.log("update pontos ok");
+    console.log(idPonto);
+};
