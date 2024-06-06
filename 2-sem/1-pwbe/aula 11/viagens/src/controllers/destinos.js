@@ -27,6 +27,8 @@ const read = async (req, res) => {
             },
             hoteis: {
                 select : {
+                    id: true,
+                    id_destino: true,
                     nome: true,
                     valor: true,
                     avaliacao: true,
