@@ -52,16 +52,18 @@ main {
     display: none;
 }
 
+.header {
+    overflow: hidden;
+    z-index: -1;
+}
+
 .header1 {
-    width: 29em;
+    z-index: 0;
+    width: 100%;
 }
 
 .header2 {
-    width: 30em;
-}
-
-.header3 {
-    width: 15em;
+    z-index: 1;
 }
 
 .icon1 {
