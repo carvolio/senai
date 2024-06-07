@@ -33,7 +33,7 @@ CREATE TABLE `Hoteis` (
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 -- AddForeignKey
-ALTER TABLE `Pontos` ADD CONSTRAINT `Pontos_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Pontos` ADD CONSTRAINT `Pontos_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 -- AddForeignKey
-ALTER TABLE `Hoteis` ADD CONSTRAINT `Hoteis_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE `Hoteis` ADD CONSTRAINT `Hoteis_id_destino_fkey` FOREIGN KEY (`id_destino`) REFERENCES `Destinos`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;

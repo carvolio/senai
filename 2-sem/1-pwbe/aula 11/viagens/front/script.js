@@ -18,6 +18,7 @@ const mostrar = () => {
 
         const editBtn = card.querySelector(".btnEditDestino");
         const applyBtn = card.querySelector(".btnApplyDestino");
+        const deleteBtn = card.querySelector(".btnDeleteDestino");
         const nomeDestino = card.querySelector(".nomeDestino");
         const valorDestino = card.querySelector(".valorDestino");
         const datas = card.querySelector(".data");
@@ -40,13 +41,15 @@ const mostrar = () => {
           updateDestino(nomeDestino, valorDestino, datas, i);
         });
 
+        deleteBtn.addEventListener("click", () => deleteDestino(destino.id));
+
         destino.pontos.forEach((ponto, j) => {
           const cardPonto = cardPontos.cloneNode(true);
           cardPonto.innerHTML += `
           <div class="card-body">
               <div class="d-flex justify-content-end">
                   <button type="button" class="btn btn-outline-none" onclick="editPontos(${i}, ${j}, ${ponto.id}, ${ponto.id_destino})" id="btnEditPonto${i}${j}"><img src="./assets/edit3.svg" class="w-75"></img></button>
-                  <button type="button" class="btn btn-outline-none" id="btnDeletePonto${i}${j}"><img src="./assets/x-square.svg" class="w-75"></img></button>
+                  <button type="button" class="btn btn-outline-none" onclick="deletePontos(${ponto.id})" id="btnDeletePonto${i}${j}"><img src="./assets/x-square.svg" class="w-75"></img></button>
               </div>
               <hr>
               <div class="d-flex align-items-center">
@@ -73,7 +76,7 @@ const mostrar = () => {
                     <div class="card-body">
                         <div class="d-flex justify-content-end">
                             <button type="button" id="btnEditHotel${i}${a}" class="btn btn-outline-none" onclick="editHoteis(${i}, ${a}, ${hotel.id}, ${hotel.id_destino})"><img src="./assets/edit3.svg" class="w-75"></img></button>
-                            <button type="button" id="btnDeleteHotel${i}${a}" class="btn btn-outline-none"><img src="./assets/x-square.svg" class="w-75"></img></button>
+                            <button type="button" id="btnDeleteHotel${i}${a}" class="btn btn-outline-none" onclick="deleteHoteis(${hotel.id})" ><img src="./assets/x-square.svg" class="w-75"></img></button>
                         </div>
                         <hr>
                         <div class="d-flex align-items-center">
@@ -223,6 +226,20 @@ const updateDestino = (nomeDestino, valorDestino, datas, i) => {
 
 };
 
+const deleteDestino = (idDestino) => {
+  console.log(idDestino);
+
+  const query = `http://localhost:3000/destinos/${idDestino}`;
+  console.log(query);
+
+  fetch(query, {
+    method: 'DELETE',
+    headers: {
+    'Content-Type': 'application/json'
+    }
+  });
+};
+
 function editPontos(i, j, pontoId, idDestino){
     // console.log(i, j, pontoId);
     const btnEditPonto = document.getElementById(`btnEditPonto${i}${j}`);
@@ -263,6 +280,20 @@ const updatePontos = (btnEditPonto, nomePonto, telPonto, valorPonto, pontoId, id
     valorPonto.setAttribute("contentEditable", "false");
 
     btnEditPonto.innerHTML = `<img src="./assets/edit3.svg" class="w-75"></img>`;
+};
+
+const deletePontos = (idPontos) => {
+  console.log(idPontos);
+
+  const query = `http://localhost:3000/pontos/${idPontos}`;
+  console.log(query);
+
+  fetch(query, {
+    method: 'DELETE',
+    headers: {
+    'Content-Type': 'application/json'
+    }
+  });
 };
 
 const editHoteis = (i, a, idHotel, idDestino) => {
@@ -315,3 +346,17 @@ const updateHoteis = (btnEditHotel, nomeHotel, valorHotel, avaliacaoHotel, email
 
     btnEditHotel.innerHTML = `<img src="./assets/edit3.svg" class="w-75"></img>`;
 }
+
+const deleteHoteis = (idHoteis) => {
+  // console.log(idPontos);
+
+  const query = `http://localhost:3000/hoteis/${idHoteis}`;
+  // console.log(query);
+
+  fetch(query, {
+    method: 'DELETE',
+    headers: {
+    'Content-Type': 'application/json'
+    }
+  });
+};
