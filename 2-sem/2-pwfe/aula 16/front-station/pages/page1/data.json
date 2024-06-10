@@ -1,0 +1,77 @@
+[
+    {
+        "name":  "Pura Vibes",
+        "author": "caroliflow",
+        "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
+        "musics": [
+            {
+                "name": "Duvet",
+                "author": "Boa",
+                "cover": "https://i.pinimg.com/originals/b9/0a/47/b90a478576d3245255244f6c4f80bdaa.jpg",
+                "src": "./assets/songs/Bôa -  Duvet (Official Video).mp3"
+            },
+            {
+                "name": "Burning Pile",
+                "author": "Mother Mother",
+                "cover": "https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c",
+                "src": "./assets/songs/Mother Mother - Burning Pile (Official English Lyric Video).mp3"
+            },
+            {
+                "name": "White Rabbit",
+                "author": "Jefferson Airplane",
+                "cover": "https://4.bp.blogspot.com/-U7mCzUThfDs/WdFsFqaWnnI/AAAAAAAAFUo/K9OO3W5qlaIAPMzPArRBhco98ko2-h9igCLcBGAs/s1600/white%2Brabbit.jpg",
+                "src": "./assets/songs/Jefferson Airplane - White Rabbit (Audio).mp3"
+            }
+        ]
+    },
+    {
+        "name": "Muito Boa",
+        "author": "caroliflow",
+        "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
+        "musics": [
+            {
+                "name": "Violence",
+                "author": "Grimes",
+                "cover": "https://lh3.googleusercontent.com/ph93RMtzqisATCOJWHtG0LviaHhgt0R3_C6MMFhaeTXSLLGEQpTpXrYD7uM7cYODP2EGFSVwBChYSwfNLQ=w544-h544-l90-rj",
+                "src": "./assets/songs/Grimes & i_o - Violence (Official Video).mp3"
+            },
+            {
+                "name": "Rasputin",
+                "author": "Boney M.",
+                "cover": "https://www.europafm.ro/wp-content/uploads/2017/06/Boney-M-Rasputin.jpg",
+                "src": "./assets/songs/Boney M. - Rasputin (Sopot Festival 1979).mp3" 
+            },
+            {
+                "name": "After Dark",
+                "author": "Mr.Kitty",
+                "cover": "https://p2.music.126.net/_oqY41yEkRKS1KYl9FXQyw==/109951163343534298.jpg",
+                "src": "./assets/songs/Mr.Kitty - After Dark.mp3"
+            }
+        ]
+    },
+    {
+        "name": "Churras",
+        "author": "caroliflow",
+        "cover": "https://i.discogs.com/rVOelSCaYq3Rcfebp7DxtTXlIyAXz09uN4o-iRstmuI/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ2Mzcx/NDMtMTQ1NzE4Mjc1/My00MDg0LmpwZWc.jpeg",
+        "musics": [
+            {
+                "name": "Creep",
+                "author": "Radiohead",
+                "cover": "https://i.discogs.com/rVOelSCaYq3Rcfebp7DxtTXlIyAXz09uN4o-iRstmuI/rs:fit/g:sm/q:90/h:606/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTQ2Mzcx/NDMtMTQ1NzE4Mjc1/My00MDg0LmpwZWc.jpeg",
+                "src": "./assets/songs/Radiohead - Creep.mp3"
+            },
+            {
+                "name": "Vienna",
+                "author": "Billy Joel",
+                "cover": "https://www.onefinalserenade.com/uploads/2/9/1/2/2912571/vienna-1_orig.jpg",
+                "src": "./assets/songs/Billy Joel - Vienna (Audio) (Official Audio).mp3"
+            },
+            {
+                "name": "Amiga da Minha Mulher",
+                "author": "Seu Jorge",
+                "cover": "https://i.scdn.co/image/ab67616d0000b27302a7d36e18face8178c73555",
+                "src": "./assets/songs/Amiga da Minha Mulher.mp3"
+            }
+        ]
+    }
+]

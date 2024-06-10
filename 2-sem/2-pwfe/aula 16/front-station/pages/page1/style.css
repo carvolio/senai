@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    background-color: #003566; 
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    height: 81.2vh;
+    margin-left: 26em;
+}
+
+
+.player {
+    background-color: #001d3d;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: .5rem;
+
+    margin-right: 1rem;
+
+    height: 26.5rem;
+
+    padding: 1rem;
+}
+
+.player .music-cover {
+    width: 250px;
+    height: auto;
+
+    border-radius: 0.5rem;
+}
+
+.player .player-title {
+    color: #9EEDE3;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.player .media-controller {
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 100%;
+
+    margin-top: 1rem;
+}
+
+.player .media-controller img {
+    width: 25px;
+    height: 25px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+}
+
+.albuns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    margin-bottom: 1rem;
+
+}
+
+.albuns .card {     
+    border-radius: 5px;
+    cursor: pointer;
+    color: #9EEDE3;
+}
+
+.albuns .card img {
+    width: 7rem;
+    width: 7rem;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.songs .song {
+    display: flex;
+    align-items: center;
+
+    background-color: #001d3d;
+
+    margin-bottom: .5rem;
+    cursor: pointer;
+}
+
+.songs .song .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+
+    color: #9EEDE3;
+}
+
+.songs .song img {
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+
+.songs .song:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.songs .song:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.songs .song img {
+    width: 5rem;
+    width: 5rem;
+}
+
+.card span{
+    background-color: #ffc300;
+    border-radius: 0.1em;
+    color: #001d3d;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../../assets/coding.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleNav.css">
+    <title>Music Station</title>
+</head>
+<body>
+        <div class="nav">
+            <a href="../../index.html"><img class="image1" src="../../assets/coding.png" alt=""></a>
+            <a href="../../pages/page1/index.html"><img class="image2" src="../../assets/quaver.png" alt=""></a>
+            <a href="../../pages/page2/index.html"><img class="image2" src="../../assets/game-controller.png" alt=""></a>
+            <a href="../../pages/page3/index.html"><img class="image2" src="../../assets/image-game3.png" alt=""></a>
+        </div>
+        <main>
+
+            <div class="player" id="player">
+                <img id="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Album-Cover" class="music-cover">
+                <h2 id="title" class="player-title">Title</h2>
+                <audio id="audio-player" controls>
+                    <source src="#">
+                </audio>
+                <div class="media-controller">
+                    <button id="prev-button" type="button" class="btn">
+                        <img src="./assets/icons/back-arrow.png" alt="Anterior">
+                    </button>
+                    <button id="play-button" type="button" class="btn">
+                        <img src="./assets/icons/play-buttton.png" alt="Play/Pause">
+                    </button>
+                    <button id="next-button" type="button" class="btn">
+                        <img src="./assets/icons/right-arrow.png" alt="Proximo">
+                    </button>
+                </div>
+            </div>
+
+            <section>
+
+           <div class="albuns" id="albuns">
+                <div class="card" style="background-color: #005C53;">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
+                    <span class="title">O MY S2</span>
+                    <span class="author">caroliflow</span>
+                </div>
+                <div class="card" style="background-color: #005C53;">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
+                    <span class="title">STICKS</span>
+                    <span class="author">Bruno Otávio</span>
+                </div>
+                <div class="card" style="background-color: #005C53;">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Playlist Cover">
+                    <span class="title">EUREKA</span>
+                    <span class="author">Bianca Nunes</span>
+                </div>
+           </div>
+
+           <div class="songs" id="songs-container">
+                <div class="song">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Song Cover">
+                    <div class="info">
+                        <span class="title">Title</span>
+                        <span class="author">Author</span>
+                    </div>
+                </div>
+                <div class="song">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Song Cover">
+                    <div class="info">
+                        <span class="title">Title</span>
+                        <span class="author">Author</span>
+                    </div>
+                </div>
+                <div class="song">
+                    <img class="cover" src="https://i.scdn.co/image/ab67616d0000b2736d82586633548d5c122ee00c" alt="Song Cover">
+                    <div class="info">
+                        <span class="title">Title</span>
+                        <span class="author">Author</span>
+                    </div>
+                </div>
+           </div>
+
+            </section>
+        </main>
+    
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script type="module" src="script.js"></script>
+</html>
