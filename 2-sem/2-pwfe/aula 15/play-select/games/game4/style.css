@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    /* flex-direction: column; */
+    background-color: #003566; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10em 0 0 40em;
+}
+
+.start {
+    background-color: #ffc300;
+    color: white;
+    border-radius: 3em;
+    padding: 1em;
+    border: 0;
+    margin: 1em;
+}
+
+.click {
+    background-color: #001d3d;
+    height: 15em;
+    width: 15em;
+    border-radius: 100%;
+}
+
+.mostra,
+.mostraPonto {
+    color: white;
+    font-size: 2.1em;
+    margin: 1em;
+}
+
+.hidden {
+    display: none;
+}
