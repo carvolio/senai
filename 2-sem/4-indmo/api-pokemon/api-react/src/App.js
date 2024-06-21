@@ -7,23 +7,27 @@ import { SvgIcon } from '@mui/material';
 
 function App() {
   const [item, setItem] = React.useState([]);
-  let numN = 8;
   
   const [num, setNum] = useState('');
-  numN = Number(num);
-  console.log(numN);
+  let numN = 20;
 
   const fetchApi = async (numN) => {
     const result = await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${numN}&offset=0`);
     return result;
   };
+
+  const inputChange = (e) => {
+    setNum(e.target.value);
+    console.log(numN);
+  };
+  numN = Number(num);
   
   React.useEffect(() => {
     fetchApi(numN).then(res => {
     setItem(res.data.results);
     // window.location.reload(true)
     })
-  }, []);
+  }, [numN]);
 
    const pokeArry = () => {
     const pokemon = [];
@@ -49,10 +53,12 @@ function App() {
         <p>POKECODE</p>
       </header>
       <div class="divInput">
-        <label>
-          Quantidade de Pokemon:
-          <input value={num} onChange={e => setNum(e.target.value)} />
-        </label>
+        <form class="form">
+          <label>
+            Quantidade de Pokemon:
+            <input value={num} type='number' onChange={inputChange} />
+          </label>
+        </form>
       </div>
       <div>
         <pre>
