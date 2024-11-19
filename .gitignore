@@ -1,4 +1,4 @@
 *.exe
 
 node_modules
-package-lock.jason
+package-lock.json
